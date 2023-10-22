@@ -1,0 +1,72 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: black !important;
+  background: linear-gradient(to bottom,  rgba(0, 0, 0, 0.94),  rgba(0, 0, 0, 1)) !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.slick-next::before, .slick-prev::before{
+  font-size: 30px !important;
+}
+
+.slick-prev{
+  left: -35px !important;
+}
+.animated-btn{
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: animatedBtn .8s infinite;
+  padding: 0;
+}
+.animated-btn2{
+  animation: animatedBtn2 .8s infinite;
+}
+@keyframes animatedBtn {
+  0%{
+    padding: 5px;
+  }
+
+  100%{
+    padding: 15px;
+  }
+}
+
+@keyframes animatedBtn2 {
+  0%{
+    padding: 5px;
+  }
+
+  100%{
+    padding: 10px;
+  }
+}
+/* .animated-border{
+  animation: animated_border .3s infinite;
+}
+
+@keyframes animated_border {
+  0%{
+    border-width: 0;
+    
+  }
+
+  100%{
+    border-width: 100%;
+  }
+} */
