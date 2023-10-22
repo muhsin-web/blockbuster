@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { LightLogoIcon } from '@/assets'
 import Link from 'next/link'
@@ -19,7 +19,10 @@ const DesktopNav = () => {
          setNavBg('transparent')
       }
    }
-   window.addEventListener('scroll', addHeaderBg)
+
+   useEffect(() => {
+      window.addEventListener('scroll', addHeaderBg)
+   },[])
   return (
     <Flex top={0} left={0} pos={'fixed'} zIndex={100} p={{base: '10px 20px', md: '15px 30px'}} bg={navBg} width={'100%'} justify={'space-between'} align={'center'}>
       <Link href={'/'}>
